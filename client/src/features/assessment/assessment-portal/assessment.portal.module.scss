@@ -1,0 +1,7 @@
+.assessmentPortal {
+  display: flex;
+  >div:nth-of-type(1) {
+    width: 20%;
+    height: 100%;
+  }
+}

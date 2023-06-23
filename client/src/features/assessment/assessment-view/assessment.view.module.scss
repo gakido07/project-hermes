@@ -1,0 +1,20 @@
+.assessmentView {}
+
+.detail {
+  margin-right: 4%;
+  display: inline-flex;
+  margin-bottom: 2rem;
+}
+
+.copyableDetail {
+  @extend .detail;
+  cursor: pointer;
+}
+
+.attemptList {
+  margin-top: 5rem;
+  min-height: 5rem;
+  padding-bottom: 2rem;
+  height: fit-content;
+  width: 90%;
+}

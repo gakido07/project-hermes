@@ -1,0 +1,14 @@
+@import "../../../styles/mixin.scss";
+
+.createAssessmentbutton {
+  @include assessment;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+
+  >svg:nth-of-type(1) {
+    margin-right: 10%;
+    height: 5rem;
+    width: 5rem;
+  }
+}

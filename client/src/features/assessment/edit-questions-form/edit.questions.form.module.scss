@@ -1,0 +1,35 @@
+.editQuestions {
+  width: 90%;
+  min-height: 9rem;
+  height: fit-content;
+  padding-bottom: 2rem;
+
+  label {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+
+  > button {
+    width: 30%;
+  }
+}
+
+.addQuestionButton {
+  border: 1px solid white;
+  background: inherit;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+
+  > svg {
+    margin-right: 5%;
+  }
+}

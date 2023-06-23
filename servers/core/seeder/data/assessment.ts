@@ -1,0 +1,56 @@
+// export const questions: QuestionEntity[] = [
+//   {
+//     answers: [],
+//     score: 2,
+//     assessment: null,
+//     updatedAt: new Date(),
+//     createdAt: new Date(),
+//     id: 2,
+//     sampleAnswer: '',
+//     number: 1,
+//   },
+//   {
+//     answers: [],
+//     score: 2,
+//     assessment: null,
+//     updatedAt: new Date(),
+//     createdAt: new Date(),
+//     id: 2,
+//     sampleAnswer: '',
+//     number: 1,
+//   },
+//   {
+//     answers: [],
+//     score: 2,
+//     assessment: null,
+//     updatedAt: new Date(),
+//     createdAt: new Date(),
+//     id: 2,
+//     sampleAnswer: '',
+//     number: 1,
+//   },
+//   {
+//     answers: [],
+//     score: 2,
+//     assessment: null,
+//     updatedAt: new Date(),
+//     createdAt: new Date(),
+//     id: 2,
+//     sampleAnswer: '',
+//     number: 1,
+//   },
+// ];
+//
+// export const assessmentSeeds: AssessmentEntity[] = [
+//   {
+//     id: 1,
+//     organizerId: 1,
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//     deadline: new Date(),
+//     name: 'Economics',
+//     questions,
+//     startTime: new Date(),
+//     key: '2edft',
+//   },
+// ];

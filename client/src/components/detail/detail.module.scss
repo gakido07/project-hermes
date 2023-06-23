@@ -1,0 +1,31 @@
+.detail {
+  background: #2A2A2D;
+  display: flex;
+  min-width: 5rem;
+  width: fit-content;
+  height: 2rem;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 8px;
+
+  svg {
+    width: 1rem;
+
+    path {
+      stroke: white;
+    }
+  }
+
+  >span:nth-of-type(1) {
+    margin-right: 1rem;
+  }
+}
+
+.copy-button {
+  background: #2A2A2D;
+
+  svg {
+    width: 1rem;
+  }
+}

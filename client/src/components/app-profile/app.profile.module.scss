@@ -1,0 +1,11 @@
+.appProfile {
+  height: 100vh;
+  width: 25%;
+  border-left: 1px solid #444444;
+  display: block;
+  padding-top: 20vh;
+
+  > * {
+    margin: auto;
+  }
+}

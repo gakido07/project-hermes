@@ -1,0 +1,12 @@
+@import "../../../styles/mixin.scss";
+@import '../assessment-card/assessment.card.module.scss';
+
+.assessmentAttempt {
+  @include assessment;
+}
+
+.grade {
+  @extend .createdAt;
+  margin-top: 1rem;
+  width: 30%;
+}

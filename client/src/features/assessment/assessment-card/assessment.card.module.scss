@@ -1,0 +1,30 @@
+@import "../../../styles/mixin";
+
+.assessmentCard {
+  @include assessment;
+  padding-left: 4%;
+  padding-top: 2rem;
+  display: block;
+
+  > h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+
+  > p {
+    margin-top: 2rem;
+    width: 70%;
+    font-size: 0.9rem;
+  }
+}
+
+.createdAt {
+  background: #242424;
+  width: 55%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  border-radius: 8px;
+}
+

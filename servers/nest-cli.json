@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "projects": {
+    "auth-server": {
+      "type": "application",
+      "root": "./auth-server",
+      "entryFile": "main",
+      "sourceRoot": "./auth-server/src",
+      "compilerOptions": {
+        "tsConfigPath": "./auth-server/tsconfig.json"
+      }
+    },
+    "theory-grader": {
+      "type": "application",
+      "root": "./theory-grader",
+      "entryFile": "./servers/theory-grader/src/main.js",
+      "sourceRoot": "./theory-grader/src",
+      "compilerOptions": {
+        "tsConfigPath": "./theory-grader/tsconfig.json"
+      }
+    }
+  },
+  "monorepo": true
+}

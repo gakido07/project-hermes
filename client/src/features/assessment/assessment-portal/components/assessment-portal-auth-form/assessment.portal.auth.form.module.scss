@@ -1,0 +1,24 @@
+
+.assessmentPortalAuthForm {
+  height: fit-content;
+  width: 30%;
+  margin: 25vh auto auto;
+  border: 1px solid #3f3f3f;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  > button {
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+
+  > label {
+    color: white;
+    margin-bottom: 0.5rem;
+    margin-left: 10%;
+  }
+}

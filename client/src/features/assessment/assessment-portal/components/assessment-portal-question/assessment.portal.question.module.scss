@@ -1,0 +1,31 @@
+.assessmentPortalQuestion {
+  margin-bottom: 2rem;
+  position: relative;
+  height: 10rem;
+  padding-bottom: 2rem;
+  width: 80%;
+
+  > p {
+    margin-bottom: 2rem;
+  }
+
+  > button {
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+
+    &:disabled {
+      background-color: #6e6e6e;
+    }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+
+      > path {
+        stroke: white;
+      }
+    }
+  }
+}
