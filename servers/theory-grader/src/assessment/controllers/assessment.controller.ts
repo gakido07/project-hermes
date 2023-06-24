@@ -3,7 +3,6 @@ import {
   Controller,
   Delete,
   Get,
-  NotFoundException,
   Param,
   Post,
   Put,
@@ -14,7 +13,6 @@ import { AssessmentService } from '@projecthermes/theorygrader/assessment/servic
 import {
   CreateAssessmentDto,
   CreateMultipleQuestionsDto,
-  CreateQuestionDto,
   PaginationParams,
   RecordAnswerRequestDto,
 } from '@projecthermes/core/dto';

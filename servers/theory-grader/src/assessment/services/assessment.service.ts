@@ -170,8 +170,8 @@ export class AssessmentService {
       },
     });
     if (!assessment) throw new NotFoundException('Assessment Not found');
-    if (assessment.startTime.getTime() >= new Date().getTime())
-      throw new ConflictException('Assessment has not started');
+    // if (assessment.startTime.getTime() >= new Date().getTime())
+    //   throw new ConflictException('Assessment has not started');
     let attempt = await this.assessmentAttemptRepository.findOne({
       where: {
         assessment: {
