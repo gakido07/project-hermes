@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from nlp.main import SentenceSimilarityCalculator
-from dto.text_similarity_dto import TextSimilarityDto
-
+from dto.text_similarity_dto import TextSimilarityDto, TextSimilarityRequestBody
+from nlp.main import getTextSimilarityFromDto
+from nlp.word_embeddings.use import get_similarity
 app = FastAPI()
 
 
@@ -11,9 +11,8 @@ async def root():
 
 
 @app.post('/text-similarity')
-async def compareAnswers(dto: TextSimilarityDto):
-  text_similarity_calculator = SentenceSimilarityCalculator(
-      dto.text1, dto.text2)
-  similarity = text_similarity_calculator.withBert()
-  print(similarity.numpy())
-  return {"request": similarity}
+async def compareAnswers(dto: TextSimilarityRequestBody):
+  print('received')
+  result = list(map(getTextSimilarityFromDto, dto.dtos))
+  print(result)
+  return {"request": result}

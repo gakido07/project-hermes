@@ -6,8 +6,7 @@ export class AnswerSimilarityDto extends SimilarityDto {
   constructor(answerId: number, text1: string, text2: string) {
     super();
     this.answerId = answerId;
-    this.text1 = text1;
-    this.text2 = text2;
-    this.similarityPercentage = null;
+    this.texts = [text1, text2];
+    this.similarityValue = null;
   }
 }

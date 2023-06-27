@@ -8,11 +8,15 @@ import { api } from '@projecthermes/client/config/api';
 import { evaluateTimeDifference } from '@projecthermes/client/features/assessment/assessment-portal/components/assessment-portal-timer/logic';
 import { ConfirmationModal } from '@projecthermes/client/components/modals/confirmation-modal/ConfirmationModal';
 import axios from 'axios';
+import { AlertContext } from '@projecthermes/client/context/AlertContext';
+import { useNavigate } from 'react-router-dom';
 
 export function AssessmentPortalQuestions() {
   const {
     state: { assessment, questions, attempt },
   } = useContext(AssessmentPortalContext);
+  const { showAlert } = useContext(AlertContext);
+  const navigate = useNavigate();
   const { isLoading, mutate } = useMutation({
     mutationFn: () =>
       api.finishAttempt(assessment.id, {
@@ -27,8 +31,12 @@ export function AssessmentPortalQuestions() {
     if (value <= 0) {
       setDialogOpen(true);
     }
-    console.log('mutate called');
     mutate();
+    showAlert({
+      message: 'Assessment successfully submitted',
+      severity: 'success',
+    });
+    navigate('/');
   };
   const handleAgree = async () => {
     mutate();
@@ -47,7 +55,9 @@ export function AssessmentPortalQuestions() {
       >
         <p>Are you sure you want to finish attempt</p>
       </ConfirmationModal>
-      <Button onClick={handleFinishButtonClick}>Finish Attempt</Button>
+      <Button loading={isLoading} onClick={handleFinishButtonClick}>
+        Finish Attempt
+      </Button>
     </div>
   );
 }

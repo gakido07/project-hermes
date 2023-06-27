@@ -29,9 +29,9 @@ def get_similarity(sentences: list[str]):
     return cosine_similarity(embeddings)
 
 
-messages = [
-    "The bisection method is an approximation method to find the roots of the given equation by repeatedly dividing the interval. This method will divide the interval until the resulting interval is found, which is extremely small.",
-    "Bisection method is an approximate method of finding the root of the equation through iterative process",
-]
+# messages = [
+#     "The bisection method is an approximation method to find the roots of the given equation by repeatedly dividing the interval. This method will divide the interval until the resulting interval is found, which is extremely small.",
+#     "Bisection method is an approximate method of finding the root of the equation through iterative process",
+# ]
 
-print(get_similarity(messages))
+# print(get_similarity(messages))

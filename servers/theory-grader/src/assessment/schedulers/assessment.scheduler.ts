@@ -27,8 +27,6 @@ export class AssessmentScheduler {
         answer.question.sampleAnswer,
       );
     });
-    return;
-
     try {
       const response = await this.mlClient.evaluateSimilarityWithArray(
         similarityDtoArray,
@@ -46,11 +44,17 @@ export class AssessmentScheduler {
         );
         this.assessmentService.setAnswerGrade(
           result.answerId,
-          result.similarityPercentage,
+          this.establishGrade(result.similarityValue, question.score),
         );
       }
     } catch (error) {
       this.logger.error(error);
     }
+  }
+
+  establishGrade(similarityValue: number, questionScore: number): number {
+    if (similarityValue <= 0) return 0;
+    if (similarityValue > 0 && similarityValue <= 8.5) return questionScore / 2;
+    return questionScore;
   }
 }

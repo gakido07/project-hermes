@@ -1,6 +1,12 @@
+from typing import Optional
 from pydantic import BaseModel
 
 
 class TextSimilarityDto(BaseModel):
-  text1: str
-  text2: str
+  texts: list[str]
+  answerId: str
+  similarityValue: float
+
+
+class TextSimilarityRequestBody(BaseModel):
+  dtos: list[TextSimilarityDto]
